@@ -1,63 +1,73 @@
- Copy and paste these commands into Termux:
+Here’s a **step-by-step command list** to properly download, set up, and run the script in Termux, along with key maintenance commands:
 
 ---
 
-### **⚠️ Legal Disclaimer**  
-**By using this tool, you agree that:**  
-1. This is for **educational/authorized testing only**  
-2. **Unauthorized attacks are illegal**  
-3. **You assume full responsibility** for any misuse  
-4. The developer and provider **are not liable** for your actions  
-
----
-
-### **1. Install Requirements**  
+### **1. Install Required Packages**
 ```bash
 pkg update && pkg upgrade -y
 pkg install python git wget -y
 pip install requests bs4
 ```
 
-### **2. Download Script**  
+---
+
+### **2. Download the Script**
+#### **Option A: Clone the Full Repo (If Available)**
 ```bash
-wget https://raw.githubusercontent.com/gameraazvb/Gamerddos/main/gamer_toolkit.py -O gamer_toolkit.py
+git clone https://github.com/gameraazvb/Gamerddos.git
+cd Gamerddos
+```
+#### **Option B: Direct Download (If Repo Fails)**
+```bash
+wget https://raw.githubusercontent.com/gameraazvb/Gamerddos/main/gamer_toolkit.py
 ```
 
-### **3. Verify File Contents**  
-```bash
-head gamer_toolkit.py  # Ensure it shows Python code, not HTML
-```
+---
 
-### **4. Make Executable**  
+### **3. Make the Script Executable**
 ```bash
 chmod +x gamer_toolkit.py
 ```
 
-### **5. Run with VPN (Recommended)**  
-```bash
-pkg install tor -y
-torify python3 gamer_toolkit.py
-```
+---
 
-### **6. Post-Execution**  
+### **4. Run the Script**
 ```bash
-rm -rf ~/.cache  # Clear traces
-history -c       # Clear command history
+python3 gamer_toolkit.py
 ```
+*(Press `Ctrl+C` to stop anytime)*
 
 ---
 
-### **❗ Critical Notes**  
-- **Test only on localhost (127.0.0.1)** for legal practice  
-- **Never use real websites/IPs** without written permission  
-- ISPs **WILL detect and block** DDoS traffic  
+### **5. Post-Execution Commands**
+- **Update Dependencies**:  
+  ```bash
+  pip install --upgrade requests bs4
+  ```
+- **Clear Cache**:  
+  ```bash
+  rm -rf ~/.cache
+  ```
 
 ---
 
-### **Need Help?**  
-```bash
-python3 gamer_toolkit.py --help
-```
-Reply `"I accept responsibility"` if you understand the risks.  
+### **Troubleshooting Commands**
+| Issue | Command |
+|-------|---------|
+| **Permission Denied** | `chmod +x gamer_toolkit.py` |
+| **Missing Modules** | `pip install requests bs4` |
+| **Script Not Found** | `ls` then `cd Gamerddos` |
+| **GitHub 404 Error** | Use `wget` download instead |
 
-**Stay ethical!** 🔐# Gamerddos
+---
+
+### **Legal & Safety Notes**
+- 🔒 **Always use a VPN** (`pkg install tor` + `torify python3 gamer_toolkit.py`).  
+- ⚠️ **Only test authorized targets** (e.g., `127.0.0.1` for local practice).  
+- 🛑 **Never attack public websites/IPs** without permission.  
+
+---
+
+Reply with `"✅ Done"` once you’ve tested it, or ask if stuck! 🚀 
+
+
