@@ -1,4 +1,3 @@
-Here’s a **step-by-step command list** to properly download, set up, and run the script in Termux, along with key maintenance commands:
 
 ---
 
@@ -67,7 +66,7 @@ python3 gamer_toolkit.py
 - 🛑 **Never attack public websites/IPs** without permission.  
 
 ---
-
+🔴 we won't be responsible for your actions
 Reply with `"✅ Done"` once you’ve tested it, or ask if stuck! 🚀 
 
 
